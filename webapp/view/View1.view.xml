@@ -1,0 +1,33 @@
+<mvc:View
+    controllerName="table.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                     <Table items="{/d/results}" columns="{t2>/}">
+                        <columns>
+                           <Column >
+                              <Text  text="{t2>title}"></Text>
+                           </Column>
+                        </columns>
+
+                        <items>
+                          <ColumnListItem >
+                            <cells>
+                               <Text text="{ProductID}"/>
+                                <Text text="{ProductName}"/> 
+                            </cells> 
+                          </ColumnListItem>
+                        </items>
+                     </Table>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
